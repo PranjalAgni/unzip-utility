@@ -1,0 +1,17 @@
+{
+  "name": "zipfs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "unrar-promise": "^1.0.0",
+    "unzipper": "^0.10.11"
+  }
+}
