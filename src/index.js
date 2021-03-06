@@ -1,4 +1,3 @@
-const fs = require('fs');
 const unzipFile = require('./lib/unzip');
 const reader = require('./lib/reader');
 const { targetPath } = require('./utils/constants');

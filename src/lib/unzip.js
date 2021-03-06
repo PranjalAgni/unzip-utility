@@ -45,7 +45,7 @@ const unzipFile = async (filename) => {
       }
     });
   } else if (filename.includes('.rar')) {
-    await extractRarFile(fileContents, writeFile);
+    // await extractRarFile(fileContents, writeFile);
   }
 };
 
