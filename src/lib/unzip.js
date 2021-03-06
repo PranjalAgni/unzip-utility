@@ -1,14 +1,13 @@
 const fs = require('fs');
 const path = require('path');
+const exec = require('child_process').exec;
 const unzipper = require('unzipper');
-const unzip = require('unrar');
 const { targetPath } = require('../utils/constants');
 
-const extractRarFile = async (fileReadStream, writeFile) => {
+const extractRarFile = async (readFile, writeFile) => {
   try {
-    fileReadStream.pipe(unzip.Parse()).on('entry', (entry) => {
-      console.log(entry.path);
-    });
+    const extractCommand = `cd '${targetPath}' && unrar x '${readFile}'`;
+    await exec(extractCommand);
   } catch (error) {
     console.error('Unrar error: ', error);
   }
@@ -39,14 +38,15 @@ const unzipFile = async (filename) => {
 
   if (filename.includes('.zip')) {
     await extractZipFile(fileContents, writeFile);
-    fs.unlink(readFile, (err) => {
-      if (err) {
-        return console.error(err);
-      }
-    });
   } else if (filename.includes('.rar')) {
-    // await extractRarFile(fileContents, writeFile);
+    await extractRarFile(readFile, writeFile);
   }
+
+  fs.unlink(readFile, (err) => {
+    if (err) {
+      return console.error(err);
+    }
+  });
 };
 
 module.exports = unzipFile;
