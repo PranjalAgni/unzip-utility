@@ -43,15 +43,18 @@ const startEvaluation = async () => {
   const projectDirs = correctFileList.filter((filePath) => isDir(filePath));
   const marks = {};
 
-  for (const project of projectDirs) {
-    const codeFiles = await getAllFiles(project);
-    const javaFiles = codeFiles.filter((file) => file.includes('.java'));
-    const result = await isCriteriaMet(javaFiles);
-    const projectName = project.match(/([^\/]*)\/*$/)[1];
-    marks[projectName] = result;
-  }
+  await Promise.all(
+    projectDirs.map(async (project) => {
+      console.log(project);
+      const codeFiles = await getAllFiles(project);
+      const javaFiles = codeFiles.filter((file) => file.includes('.java'));
+      const result = await isCriteriaMet(javaFiles);
+      const projectName = project.match(/([^\/]*)\/*$/)[1];
+      marks[projectName] = result;
+    })
+  );
 
-  console.log(marks);
+  console.log(Object.keys(marks).length);
 
   await writeFile(JSON.stringify(marks, null, 3));
 };
