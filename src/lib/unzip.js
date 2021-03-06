@@ -1,12 +1,13 @@
 const fs = require('fs');
 const path = require('path');
-const exec = require('child_process').exec;
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
 const unzipper = require('unzipper');
 const { targetPath } = require('../utils/constants');
 
-const extractRarFile = async (readFile, writeFile) => {
+const extractRarFile = async (filename) => {
   try {
-    const extractCommand = `cd '${targetPath}' && unrar x '${readFile}'`;
+    const extractCommand = `cd '${targetPath}' && unrar x '${filename}'`;
     await exec(extractCommand);
   } catch (error) {
     console.error('Unrar error: ', error);
@@ -39,9 +40,10 @@ const unzipFile = async (filename) => {
   if (filename.includes('.zip')) {
     await extractZipFile(fileContents, writeFile);
   } else if (filename.includes('.rar')) {
-    await extractRarFile(readFile, writeFile);
+    await extractRarFile(filename);
   }
 
+  console.log('Extracted and deleting: ', readFile);
   fs.unlink(readFile, (err) => {
     if (err) {
       return console.error(err);
