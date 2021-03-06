@@ -9,7 +9,7 @@ const getNewFiles = (filesA, filesB) => {
   return getNewFiles;
 };
 
-const getFiles = (targetPath) => {
+const listDirContents = (targetPath) => {
   return new Promise((resolve, reject) => {
     fs.readdir(targetPath, (err, files) => {
       if (err) reject(err);
@@ -32,9 +32,19 @@ const readFile = (filePath) => {
   });
 };
 
+const writeFile = (resultJSON) => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile('marks.json', resultJSON, 'utf8', (err) => {
+      if (err) return reject(err);
+      resolve();
+    });
+  });
+};
+
 module.exports = {
   getNewFiles,
-  getFiles,
+  listDirContents,
   isDir,
   readFile,
+  writeFile,
 };
