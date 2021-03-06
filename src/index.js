@@ -1,7 +1,6 @@
 const unzipFile = require('./lib/unzip');
-const reader = require('./lib/reader');
 const { targetPath } = require('./utils/constants');
-const { getNewFiles } = require('./utils/files');
+const { getNewFiles, getFiles } = require('./utils/files');
 
 let filesUnzipped = [];
 
@@ -13,15 +12,21 @@ const unzipFiles = (fileList) => {
 };
 
 const main = async () => {
-  let files = await reader.getFiles(targetPath);
+  let files = await getFiles(targetPath);
+  files = files.filter(
+    (file) => file.includes('.zip') || file.includes('.rar')
+  );
   console.log('Files: ', files);
 
   setInterval(async () => {
-    files = await reader.getFiles(targetPath);
+    files = await getFiles(targetPath);
+    files = files.filter(
+      (file) => file.includes('.zip') || file.includes('.rar')
+    );
     const newFiles = getNewFiles(files, filesUnzipped);
     if (newFiles.length > 0) {
       console.log('New Files: ', newFiles);
-      unzipFiles(newFiles);
+      // unzipFiles(newFiles);
     } else {
       console.log('No new files found yet');
     }
