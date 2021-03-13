@@ -1,27 +1,248 @@
 {
-   "1805702_SHOUVIK CHOUDHURY_COLLECTIONS AND JDBC": true,
-   "1805480_RohitKumarJanu_W1D4 - Rohit kr janu": true,
-   "1805082_TanishkaAnand_W1D4 - TANISHKA ANAND": true,
-   "TestCoonection2": true,
-   "1805147_Reetam_Biswas_W1D4": true,
-   "1806447_Veeresh Shukla_W1D4 - VEERESH SHUKLA": false,
-   "1806531_TitikshaPandey_W1D4 - TITIKSHA PANDEY": false,
-   "1805477_ayushraj_w1d4 - Ayush Raj": true,
-   "1829207_Vedant Shrivastava_Collections and JDBC - VEDANT SHRIVASTAVA": true,
-   "infinitywar_1805460": true,
-   "1805128_Ananya De_w1d4 - ANANYA DE": false,
-   "1830068_Tushar-khetan_W1D4 - TUSHAR KHETAN": false,
-   "1806473_Hopansh_Collections and JDBC - Hopansh Gahlot": true,
-   "1828180_PrernaKumari_W1D4": true,
-   "1805523_ShazraIrshad_W1D4": true,
-   "1806197_Anuj Sinha_Collections and JDBC - 197_ANUJ SINHA": true,
-   "1805351_SumitAgrawal_Collections and JDBC": true,
-   "1805182_Aayushi__Collections and JDBC _SS - AAYUSHI": false,
-   "1804395_PALLAVI MOHINI_COLLECTIONS AND JDBC": false,
-   "1805183_Aayusmita Gorai_W1D4": true,
-   "1830087_Ayudh_Sarkar_W1D4 - Ayudh Sarkar": false,
-   "1805299_Kalpana Sinha_W1D4 - 299_KALPANA SINHA": true,
-   "1806275_Abhijit Kumar_W1D4 - CODY GAMER": true,
-   "1828059_ayushpandey_W1D4": false,
-   "1807009_AnkurHore_W1D4 - ANKUR HORE": true
+   "1805602_Sayan_Kumar_Das_W2D2 - SAYAN KUMAR DAS": {
+      "total": 3.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "CSS properties not used for background-color and font-size is not used"
+      ]
+   },
+   "1807009_AnkurHore_W2D2 - ANKUR HORE": {
+      "total": 4,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1806473_Hopansh_W2D2 - Hopansh Gahlot": {
+      "total": 4.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1828185_S Vinay Vignesh": {
+      "total": 4,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1804034_PratikGhosh": {
+      "total": 4.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1805182_Aayushi_W2D2 - AAYUSHI": {
+      "total": 4.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1807207_RahitNath_W2D2 - 207_ Rahit Nath": {
+      "total": 4,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1828058_Avi_W2D2 - AVI MISHRA": {
+      "total": 3.5,
+      "comments": [
+         "Styling can be done better",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling"
+      ]
+   },
+   "1806447_Veeresh_Shukla_W2D2 - VEERESH SHUKLA": {
+      "total": 4.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1828275_SauravKumar": {
+      "total": 4.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1828287_SwagatPany_W2D2 - 287_SWAGAT PANY": {
+      "total": 3.5,
+      "comments": [
+         "Styling can be done better",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling"
+      ]
+   },
+   "1804395_Pallavi Mohini": {
+      "total": 4.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "HarshdeepSingh_1830096": {
+      "total": 4.5,
+      "comments": [
+         "Proper styling has been done, using different CSS properties",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling"
+      ]
+   },
+   "1829207_Vedant Shrivastava_W2D2 - VEDANT SHRIVASTAVA": {
+      "total": 4.5,
+      "comments": [
+         "Proper styling has been done, using different CSS properties",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling"
+      ]
+   },
+   "1804371_Chirodeep Kar": {
+      "total": 4.5,
+      "comments": [
+         "Proper styling has been done, using different CSS properties",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling"
+      ]
+   },
+   "1804531_Sayak Mondal": {
+      "total": 4.5,
+      "comments": [
+         "Proper styling has been done, using different CSS properties",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling"
+      ]
+   },
+   "1805299_Kalpana Sinha_W2D2 - 299_KALPANA SINHA": {
+      "total": 4.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1805128_Ananya De_W2D2 - ANANYA DE": {
+      "total": 3,
+      "comments": [
+         "Styling can be done better",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards"
+      ]
+   },
+   "1806197_Anuj_Sinha_W2D2 - 197_ANUJ SINHA": {
+      "total": 4,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1805351_SumitAgrawal": {
+      "total": 4.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1806357_TanishaAgarwal_W2D2 - TANISHA AGARWAL": {
+      "total": 4,
+      "comments": [
+         "Proper styling has been done, using different CSS properties",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards"
+      ]
+   },
+   "1805610_shuvra": {
+      "total": 4.5,
+      "comments": [
+         "Proper styling has been done, using different CSS properties",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling"
+      ]
+   },
+   "1828088_RahulChowdhury_W2D2 - 088_RAHUL CHOWDHURY": {
+      "total": 4.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1808048_SomyaMahapatra_W2D2 - SOMYA SUHANS MAHAPATRA": {
+      "total": 4.5,
+      "comments": [
+         "Proper styling has been done, using different CSS properties",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling"
+      ]
+   },
+   "1828180_PrernaKumari": {
+      "total": 4.5,
+      "comments": [
+         "Proper styling has been done, using different CSS properties",
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling"
+      ]
+   },
+   "1828270_Sakshi Vishwakarma": {
+      "total": 3,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Styling can be done better"
+      ]
+   },
+   "1830068_Tusharkhetan_W2D2 - TUSHAR KHETAN": {
+      "total": 4.5,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Not used inline styling",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   },
+   "1828248_Lupita Dey_W2D2 - 248_LUPITA DEY": {
+      "total": 4,
+      "comments": [
+         "Use of HTML table tags like tr , td , etc.",
+         "Followed clean code standards",
+         "Proper styling has been done, using different CSS properties"
+      ]
+   }
 }
