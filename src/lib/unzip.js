@@ -56,7 +56,7 @@ const unzipFile = async (filename) => {
   if (filename.includes('.zip')) {
     await extractZipFile(fileContents, writeFile);
   } else if (filename.includes('.rar')) {
-    const dirname = filename.split('_W2D2')[0];
+    const dirname = filename.split(/_W2D2/gi)[0];
     await extractRarFile(filename, `'${dirname}'`);
     fileToDelete = path.join(targetPath, dirname, filename);
   }
