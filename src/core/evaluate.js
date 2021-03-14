@@ -1,5 +1,5 @@
 const path = require('path');
-const { targetPath, HTCS } = require('../utils/constants');
+const { targetPath, JS } = require('../utils/constants');
 const {
   listDirContents,
   isDir,
@@ -10,39 +10,45 @@ const {
 const analyzeCopy = (data, context) => {
   let marks = 0;
   let comment = [];
-  const { type, name, numFiles } = context;
-  if (type === 'html') {
-    if (data.includes('tr') && data.includes('td')) {
-      marks += 3;
-      comment.push(HTCS[1].comment, HTCS[2].comment);
-    }
-    if (data.includes('style=') || data.includes('style =')) {
-      if (numFiles === 1) {
-        console.log('Used of inline styling: ', name);
-        comment.push('Used inline styling');
-      }
-    } else {
-      marks += 0.5;
-      comment.push(HTCS[3].comment);
-    }
-  } else if (type === 'css') {
-    if (data.includes('background-color') && data.includes('font-size')) {
-      marks += 1;
-      comment.push(HTCS[4].comment);
-    } else {
-      comment.push('Styling can be done better');
-    }
+  const { name, numFiles } = context;
+
+  marks += 0.5;
+  comment.push('Input data taken from JSON');
+
+  if (data.includes('Math.max')) {
+    marks += JS[1].marks;
+    comment.push(JS[1].comment);
   }
 
-  if (type === 'html' && numFiles === 1) {
-    if (data.includes('background-color') && data.includes('font-size')) {
-      marks += 1;
-      comment.push(HTCS[4].comment);
-    } else {
-      comment.push(
-        'CSS properties not used for background-color and font-size is not used'
-      );
-    }
+  if (data.includes('forEach')) {
+    marks += JS[2].marks;
+    comment.push(JS[2].comment);
+  } else if (
+    data.includes('.map') ||
+    data.includes('.filter') ||
+    data.includes('.reduce')
+  ) {
+    marks += JS[3].marks;
+    comment.push(JS[3].comment);
+  } else if (data.includes('for (') || data.includes('for(')) {
+    marks += JS[4].marks;
+    comment.push(JS[4].comment);
+  }
+
+  if (data.includes('table') || data.includes('TABLE')) {
+    marks += JS[5].marks;
+    comment.push(JS[5].comment);
+  }
+
+  if (data.includes('innerHTML')) {
+    marks += JS[6].marks;
+    comment.push(JS[6].comment);
+  }
+
+  if (numFiles >= 2) {
+    comment.push('Clean code, splitted JS and HTML logic');
+  } else {
+    comment.push('Code can be improved, everything written in single file');
   }
 
   return {
@@ -57,19 +63,20 @@ const isCriteriaMet = (projectName) => async (fileList) => {
       if (!fileList.length) return resolve(false);
       let total = 0;
       let comments = [];
+
+      const context = {
+        name: projectName,
+        numFiles: fileList.length,
+      };
+
+      let data = '';
       for (const file of fileList) {
-        const data = await readFile(file);
-
-        const context = {
-          name: projectName,
-          type: file.endsWith('html') ? 'html' : 'css',
-          numFiles: fileList.length,
-        };
-
-        const { marks, comment } = analyzeCopy(data, context);
-        total += marks;
-        comments = comments.concat(comment);
+        data += '\n' + (await readFile(file));
       }
+
+      const { marks, comment } = analyzeCopy(data, context);
+      total += marks;
+      comments = comments.concat(comment);
 
       return resolve({
         total,
@@ -103,7 +110,8 @@ const startEvaluation = async () => {
       // console.log(project);
       const codeFiles = await getAllFiles(project);
       const evaluationFiles = codeFiles.filter(
-        (file) => file.includes('.html') || file.includes('.css')
+        (file) =>
+          file.includes('.html') || file.includes('.js') || file.includes('.JS')
       );
 
       const projectName = project.match(/([^\/]*)\/*$/)[1];

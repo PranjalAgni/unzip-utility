@@ -3,29 +3,39 @@ const path = require('path');
 
 const targetPath = path.join(appRoot.path, '../', '../', 'java', 'evaluations');
 
-const HTCS = {
+const JS = {
   01: {
-    marks: 2,
-    comment: 'Use of HTML table tags like tr , td , etc.',
+    marks: 1,
+    comment: 'Used Math class to calculate max',
   },
 
   02: {
-    marks: 1,
-    comment: 'Followed clean code standards',
+    marks: 2,
+    comment: 'Used forEach array method for traversal',
   },
 
   03: {
-    marks: 0.5,
-    comment: 'Not used inline styling',
+    marks: 1,
+    comment: 'Used other JS array methods',
   },
 
   04: {
+    marks: 0.5,
+    comment: 'Used for loop for array traversal',
+  },
+
+  05: {
     marks: 1,
-    comment: 'Proper styling has been done, using different CSS properties',
+    comment: 'Used html table to display data',
+  },
+
+  06: {
+    marks: 0.5,
+    comment: 'Maximum was displayed',
   },
 };
 
 module.exports = {
   targetPath,
-  HTCS,
+  JS,
 };
