@@ -1,5 +1,5 @@
 const path = require('path');
-const { targetPath, JS } = require('../utils/constants');
+const { targetPath, INF_SCROLL } = require('../utils/constants');
 const {
   listDirContents,
   isDir,
@@ -7,48 +7,40 @@ const {
   writeFile,
 } = require('../utils/files');
 
-const analyzeCopy = (data, context) => {
+const analyzeCopy = (data) => {
   let marks = 0;
   let comment = [];
-  const { name, numFiles } = context;
 
-  marks += 0.5;
-  comment.push('Input data taken from JSON');
+  // const end = data.indexOf('https://picsum.photos');
+  // if (end !== -1) {
+  //   const start = end - 15;
+  //   console.log(data.substring(start, end));
+  // }
 
-  if (data.includes('Math.max')) {
-    marks += JS[1].marks;
-    comment.push(JS[1].comment);
-  }
-
-  if (data.includes('forEach')) {
-    marks += JS[2].marks;
-    comment.push(JS[2].comment);
-  } else if (
-    data.includes('.map') ||
-    data.includes('.filter') ||
-    data.includes('.reduce')
+  if (
+    data.includes('fetch(`https://picsum.photos') ||
+    data.includes('fetch("https://picsum.photos') ||
+    data.includes("fetch('https://picsum.photos")
   ) {
-    marks += JS[3].marks;
-    comment.push(JS[3].comment);
-  } else if (data.includes('for (') || data.includes('for(')) {
-    marks += JS[4].marks;
-    comment.push(JS[4].comment);
+    comment.push('Used fetch() for API Call');
+  } else if (data.includes('axios')) {
+    marks += INF_SCROLL[1].marks;
+    comment.push(INF_SCROLL[1].comment);
   }
 
-  if (data.includes('table') || data.includes('TABLE')) {
-    marks += JS[5].marks;
-    comment.push(JS[5].comment);
+  if (data.includes('react-infinite-scroll-component')) {
+    marks += INF_SCROLL[2].marks;
+    comment.push(INF_SCROLL[2].comment);
   }
 
-  if (data.includes('innerHTML')) {
-    marks += JS[6].marks;
-    comment.push(JS[6].comment);
+  if (data.includes('useState') || data.includes('useEffect')) {
+    marks += INF_SCROLL[3].marks;
+    comment.push(INF_SCROLL[3].comment);
   }
 
-  if (numFiles >= 2) {
-    comment.push('Clean code, splitted JS and HTML logic');
-  } else {
-    comment.push('Code can be improved, everything written in single file');
+  if (data.includes('table') || data.includes('Table')) {
+    marks += INF_SCROLL[4].marks;
+    comment.push(INF_SCROLL[4].comment);
   }
 
   return {
@@ -64,17 +56,14 @@ const isCriteriaMet = (projectName) => async (fileList) => {
       let total = 0;
       let comments = [];
 
-      const context = {
-        name: projectName,
-        numFiles: fileList.length,
-      };
-
       let data = '';
       for (const file of fileList) {
-        data += '\n' + (await readFile(file));
+        if (!file.includes('serviceWorker')) {
+          data += '\n' + (await readFile(file));
+        }
       }
 
-      const { marks, comment } = analyzeCopy(data, context);
+      const { marks, comment } = analyzeCopy(data);
       total += marks;
       comments = comments.concat(comment);
 
@@ -110,8 +99,7 @@ const startEvaluation = async () => {
       // console.log(project);
       const codeFiles = await getAllFiles(project);
       const evaluationFiles = codeFiles.filter(
-        (file) =>
-          file.includes('.html') || file.includes('.js') || file.includes('.JS')
+        (file) => file.includes('.js') || file.includes('.JS')
       );
 
       const projectName = project.match(/([^\/]*)\/*$/)[1];

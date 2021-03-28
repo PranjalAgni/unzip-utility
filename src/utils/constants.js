@@ -3,39 +3,30 @@ const path = require('path');
 
 const targetPath = path.join(appRoot.path, '../', '../', 'java', 'evaluations');
 
-const JS = {
+const INF_SCROLL = {
   01: {
     marks: 1,
-    comment: 'Used Math class to calculate max',
+    comment: 'Used Axios call with proper parameters',
   },
 
   02: {
     marks: 2,
-    comment: 'Used forEach array method for traversal',
+    comment:
+      'Used react-infinite-scroll-component for implementing InfiniteScroll',
   },
 
   03: {
     marks: 1,
-    comment: 'Used other JS array methods',
+    comment: 'Used React hooks',
   },
 
   04: {
-    marks: 0.5,
-    comment: 'Used for loop for array traversal',
-  },
-
-  05: {
     marks: 1,
-    comment: 'Used html table to display data',
-  },
-
-  06: {
-    marks: 0.5,
-    comment: 'Maximum was displayed',
+    comment: 'Displayed data in tabular format',
   },
 };
 
 module.exports = {
   targetPath,
-  JS,
+  INF_SCROLL,
 };
