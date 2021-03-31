@@ -90,7 +90,6 @@ const startEvaluation = async () => {
 
       const cleanProjectPath = slash(project);
       const projectName = cleanProjectPath.match(/([^\/]*)\/*$/)[1];
-      console.log(projectName);
       const rollNumber = projectName.split('_')[0];
       const result = await isCriteriaMet(projectName)(evaluationFiles);
       marks[rollNumber] = result;
@@ -101,14 +100,13 @@ const startEvaluation = async () => {
     path.join(__dirname, '../../', 'roll.txt')
   );
 
-  console.log(rollNumData.split('\n'));
-  console.log(Object.keys(marks));
-
   const evaluationsResultList = rollNumData.split('\n').map((rollNum) => {
-    if (marks[rollNum]) {
-      const { total, comments } = marks[rollNum];
-      return [rollNum, total, comments.join('\n')];
+    if (!marks[rollNum]) {
+      return [rollNum, 0, 'He/She has submitted with a wrong file name'];
     }
+
+    const { total, comments } = marks[rollNum];
+    return [rollNum, total, comments.join('\n')];
   });
 
   await Promise.all([
