@@ -1,46 +1,33 @@
 const path = require('path');
-const { targetPath, INF_SCROLL } = require('../utils/constants');
+const slash = require('slash');
+const { targetPath, DEB } = require('../utils/constants');
 const {
   listDirContents,
   isDir,
   readFile,
   writeFile,
+  emitCSV,
 } = require('../utils/files');
 
 const analyzeCopy = (data) => {
   let marks = 0;
   let comment = [];
 
-  // const end = data.indexOf('https://picsum.photos');
-  // if (end !== -1) {
-  //   const start = end - 15;
-  //   console.log(data.substring(start, end));
-  // }
-
-  if (
-    data.includes('fetch(`https://picsum.photos') ||
-    data.includes('fetch("https://picsum.photos') ||
-    data.includes("fetch('https://picsum.photos")
-  ) {
-    comment.push('Used fetch() for API Call');
-  } else if (data.includes('axios')) {
-    marks += INF_SCROLL[1].marks;
-    comment.push(INF_SCROLL[1].comment);
+  if (data.includes('setTimeout') && data.includes('clearTimeout')) {
+    marks += DEB[1].marks;
+    comment.push(DEB[1].comment);
+  } else {
+    comment.push('Debouncing not implemented correctly');
   }
 
-  if (data.includes('react-infinite-scroll-component')) {
-    marks += INF_SCROLL[2].marks;
-    comment.push(INF_SCROLL[2].comment);
+  if (data.includes('search')) {
+    marks += DEB[2].marks;
+    comment.push(DEB[2].comment);
   }
 
-  if (data.includes('useState') || data.includes('useEffect')) {
-    marks += INF_SCROLL[3].marks;
-    comment.push(INF_SCROLL[3].comment);
-  }
-
-  if (data.includes('table') || data.includes('Table')) {
-    marks += INF_SCROLL[4].marks;
-    comment.push(INF_SCROLL[4].comment);
+  if (data.includes('map')) {
+    marks += DEB[3].marks;
+    comment.push(DEB[3].comment);
   }
 
   return {
@@ -96,21 +83,40 @@ const startEvaluation = async () => {
 
   await Promise.all(
     projectDirs.map(async (project) => {
-      // console.log(project);
       const codeFiles = await getAllFiles(project);
       const evaluationFiles = codeFiles.filter(
         (file) => file.includes('.js') || file.includes('.JS')
       );
 
-      const projectName = project.match(/([^\/]*)\/*$/)[1];
+      const cleanProjectPath = slash(project);
+      const projectName = cleanProjectPath.match(/([^\/]*)\/*$/)[1];
+      console.log(projectName);
+      const rollNumber = projectName.split('_')[0];
       const result = await isCriteriaMet(projectName)(evaluationFiles);
-      marks[projectName] = result;
+      marks[rollNumber] = result;
     })
   );
 
-  console.log(Object.keys(marks).length);
+  const rollNumData = await readFile(
+    path.join(__dirname, '../../', 'roll.txt')
+  );
 
-  await writeFile(JSON.stringify(marks, null, 3));
+  console.log(rollNumData.split('\n'));
+  console.log(Object.keys(marks));
+
+  const evaluationsResultList = rollNumData.split('\n').map((rollNum) => {
+    if (marks[rollNum]) {
+      const { total, comments } = marks[rollNum];
+      return [rollNum, total, comments.join('\n')];
+    }
+  });
+
+  await Promise.all([
+    writeFile('marks.json', JSON.stringify(marks, null, 3)),
+    emitCSV(evaluationsResultList),
+  ]);
+
+  console.log('Evaluations done = ', evaluationsResultList.length);
 };
 
 startEvaluation();

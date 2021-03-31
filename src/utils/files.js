@@ -1,4 +1,5 @@
 const fs = require('fs');
+const Papa = require('papaparse');
 
 const getNewFiles = (filesA, filesB) => {
   const getNewFiles = [];
@@ -32,13 +33,23 @@ const readFile = (filePath) => {
   });
 };
 
-const writeFile = (resultJSON) => {
+const writeFile = (fileName, data) => {
   return new Promise((resolve, reject) => {
-    fs.writeFile('marks.json', resultJSON, 'utf8', (err) => {
+    fs.writeFile(fileName, data, 'utf8', (err) => {
       if (err) return reject(err);
       resolve();
     });
   });
+};
+
+const emitCSV = (data) => {
+  const columns = ['Roll', 'Marks', 'Comments'];
+  const csv = Papa.unparse({
+    fields: columns,
+    data: data,
+  });
+
+  return writeFile('results.csv', csv);
 };
 
 module.exports = {
@@ -47,4 +58,5 @@ module.exports = {
   isDir,
   readFile,
   writeFile,
+  emitCSV,
 };

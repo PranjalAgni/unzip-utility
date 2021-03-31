@@ -1,332 +1,294 @@
 {
-   "1805182_Aayushi_W5D1 - AAYUSHI": {
+   "1803045": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1804531_Sayak Mondal_W5D1 - Mr": {
+   "1803103": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1805416_RitikaPriya_W5D1 - RITIKA PRIYA": {
+   "1804371": {
+      "total": 2,
+      "comments": [
+         "Debouncing not implemented correctly",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
+      ]
+   },
+   "1804395": {
+      "total": 5,
+      "comments": [
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
+      ]
+   },
+   "1804531": {
+      "total": 2,
+      "comments": [
+         "Debouncing not implemented correctly",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
+      ]
+   },
+   "1804558": {
+      "total": 5,
+      "comments": [
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
+      ]
+   },
+   "1805082": {
+      "total": 5,
+      "comments": [
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
+      ]
+   },
+   "1805147": {
+      "total": 5,
+      "comments": [
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
+      ]
+   },
+   "1805162": {
+      "total": 5,
+      "comments": [
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
+      ]
+   },
+   "1805183": {
+      "total": 5,
+      "comments": [
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
+      ]
+   },
+   "1805299": {
       "total": 4,
       "comments": [
-         "Used fetch() for API Call",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly"
       ]
    },
-   "1805616_sumitkumargupta_W5D1 - Sumit Gupta": {
+   "1805351": {
+      "total": 2,
+      "comments": [
+         "Debouncing not implemented correctly",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
+      ]
+   },
+   "1805460": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1806473_Hopansh_W5D1 - Hopansh Gahlot": {
+   "1805523": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1828058_Avi_W5D1 - AVI MISHRA": {
+   "1805559": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1805351_SumitAgrawal_W5D1 - SUMIT AGRAWAL": {
-      "total": 5,
-      "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
-      ]
-   },
-   "1805387_Deepabali Majumder_W5D1 - DEEPABALI MAJUMDER": {
-      "total": 5,
-      "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
-      ]
-   },
-   "1805602_Sayan_Kumar_Das_W5D1 - SAYAN KUMAR DAS": {
-      "total": 5,
-      "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
-      ]
-   },
-   "1806410_RuchiraChakravarty_W5D1 - 410_RUCHIRA CHAKRAVARTY": {
-      "total": 5,
-      "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
-      ]
-   },
-   "1830144_VenusBhushan": {
+   "1805631": {
       "total": 4,
       "comments": [
-         "Used fetch() for API Call",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "UI is according to the requirement"
       ]
    },
-   "1830096_Harshdeep Singh K": {
+   "1805702": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1828248_Lupita Dey_W5D1 - 248_LUPITA DEY": {
+   "1805739": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1805460_AkashShrivastava_W5D1 - Akash Shrivastava": {
+   "1806144": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1829207_VedantShrivastava_W5D1 - VEDANT SHRIVASTAVA": {
+   "1806197": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1805147_Reetam_Biswas_W5D1 - REETAM BISWAS": {
+   "1806275": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1804558_Twisha_W5D1 - TWISHA MUKHERJEE": {
+   "1806416": {
+      "total": 5,
+      "comments": [
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
+      ]
+   },
+   "1806473": {
       "total": 4,
       "comments": [
-         "Used fetch() for API Call",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly"
       ]
    },
-   "1806144_Pushkar Prabhat_W5D1 - 144_PUSHKAR PRABHAT": {
+   "1807175": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1806339_shasank_W5D1 - 339_shasank": {
+   "1808048": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1803042_RohitMohanty_W5D1 - 42_ROHIT MOHANTY": {
+   "1828058": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1805559_Arya": {
+   "1828180": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1805702_Shouvik Choudhury": {
+   "1828248": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1806171_Suman Bhunia_W5D1 - 171_Suman Bhunia": {
+   "1828270": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1828180_PrernaKumari_W5D1 - 180_PRERNA KUMARI": {
+   "1828275": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1804371_Chirodeep kar_W5D1 - CHIRODEEP KAR": {
+   "1828284": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1805523_ShazraIrshad": {
+   "1828287": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1805477_ayushraj_w5d1 - AYUSH RAJ": {
+   "1829130": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1803045_SabarishNair": {
+   "1829154": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1805128_Ananya De_w5D1 - ANANYA DE": {
+   "1829207": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1805061_SayanBanerjee": {
+   "1830068": {
       "total": 5,
       "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "Search functionality is working correctly",
+         "UI is according to the requirement"
       ]
    },
-   "1828287_Swagat Pany_W5D1 - 287_SWAGAT PANY": {
+   "1830144": {
       "total": 4,
       "comments": [
-         "Used fetch() for API Call",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
-      ]
-   },
-   "1804395_Pallavi Mohini": {
-      "total": 5,
-      "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
-      ]
-   },
-   "1828284_Tanisha Kumari_W5D1 - 284_Tanisha Kumari": {
-      "total": 4,
-      "comments": [
-         "Used fetch() for API Call",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
-      ]
-   },
-   "1805183_AayusmitaGorai_W5D1 - 183_AAYUSMITA GORAI": {
-      "total": 5,
-      "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
-      ]
-   },
-   "1805610_shuvra": {
-      "total": 5,
-      "comments": [
-         "Used Axios call with proper parameters",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
-      ]
-   },
-   "1808048_SomyaMahapatra_W5D1 - SOMYA SUHANS MAHAPATRA": {
-      "total": 4,
-      "comments": [
-         "Used fetch() for API Call",
-         "Used react-infinite-scroll-component for implementing InfiniteScroll",
-         "Used React hooks",
-         "Displayed data in tabular format"
-      ]
-   },
-   "g-05-14-exists": {
-      "total": 1,
-      "comments": [
-         "Displayed data in tabular format"
+         "Debouncing implemented properly, with correct timeout",
+         "UI is according to the requirement"
       ]
    }
 }

@@ -28,4 +28,10 @@ Extract zipped/rar files
 
 `npm run start` Will listen for new (zip/rar) files, and will extract them
 
-`npm run marks` Will evaluate all the assignments, and emits a `marks.json` file with all the marks and comments for each assignment
+Do the evaluations
+
+- Paste all the roll numbers in `roll.txt` file
+
+- Run `npm run marks` It will evaluate all the assignments, and emits `marks.json` and `results.csv` file with all the marks and comments for each assignment
+
+- `results.csv`(**recommended**) will be generated in the order in which assignments are present in the sheet, so you can directly copy paste the column
