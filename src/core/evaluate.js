@@ -1,6 +1,6 @@
 const path = require('path');
 const slash = require('slash');
-const { targetPath, DEB } = require('../utils/constants');
+const { targetPath, INF_SCROLL } = require('../utils/constants');
 const {
   listDirContents,
   isDir,
@@ -13,21 +13,36 @@ const analyzeCopy = (data) => {
   let marks = 0;
   let comment = [];
 
-  if (data.includes('setTimeout') && data.includes('clearTimeout')) {
-    marks += DEB[1].marks;
-    comment.push(DEB[1].comment);
-  } else {
-    comment.push('Debouncing not implemented correctly');
+  // const end = data.indexOf('https://picsum.photos');
+  // if (end !== -1) {
+  //   const start = end - 15;
+  //   console.log(data.substring(start, end));
+  // }
+
+  if (
+    data.includes('fetch(`https://picsum.photos') ||
+    data.includes('fetch("https://picsum.photos') ||
+    data.includes("fetch('https://picsum.photos")
+  ) {
+    comment.push('Used fetch() for API Call');
+  } else if (data.includes('axios')) {
+    marks += INF_SCROLL[1].marks;
+    comment.push(INF_SCROLL[1].comment);
   }
 
-  if (data.includes('search')) {
-    marks += DEB[2].marks;
-    comment.push(DEB[2].comment);
+  if (data.includes('react-infinite-scroll-component')) {
+    marks += INF_SCROLL[2].marks;
+    comment.push(INF_SCROLL[2].comment);
   }
 
-  if (data.includes('map')) {
-    marks += DEB[3].marks;
-    comment.push(DEB[3].comment);
+  if (data.includes('useState') || data.includes('useEffect')) {
+    marks += INF_SCROLL[3].marks;
+    comment.push(INF_SCROLL[3].comment);
+  }
+
+  if (data.includes('table') || data.includes('Table')) {
+    marks += INF_SCROLL[4].marks;
+    comment.push(INF_SCROLL[4].comment);
   }
 
   return {

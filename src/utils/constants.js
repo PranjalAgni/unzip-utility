@@ -3,24 +3,30 @@ const path = require('path');
 
 const targetPath = path.join(appRoot.path, '../', '../', 'java', 'evaluations');
 
-const DEB = {
+const INF_SCROLL = {
   01: {
-    marks: 3,
-    comment: 'Debouncing implemented properly, with correct timeout',
+    marks: 1,
+    comment: 'Used Axios call with proper parameters',
   },
 
   02: {
-    marks: 1,
-    comment: 'Search functionality is working correctly',
+    marks: 2,
+    comment:
+      'Used react-infinite-scroll-component for implementing InfiniteScroll',
   },
 
   03: {
     marks: 1,
-    comment: 'UI is according to the requirement',
+    comment: 'Used React hooks',
+  },
+
+  04: {
+    marks: 1,
+    comment: 'Displayed data in tabular format',
   },
 };
 
 module.exports = {
   targetPath,
-  DEB,
+  INF_SCROLL,
 };
